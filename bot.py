@@ -5,12 +5,14 @@ import pandas as pd
 import numpy as np
 from alpaca_trade_api import REST
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
 #---------------------------
 # API 
 #---------------------------
-API_KEY = "PKRXT5FDOY66J2QLADBCZM56UR"
-API_SECRET = "AVUxxopGAbhtz4xUaz6dAFERNJWxmXhsQNfQqcow76Tj"
+API_KEY = os.getenv('ALPACA_API_KEY')
+API_SECRET = os.getenv('ALPACA_SECRET')
 BASE_URL = "https://paper-api.alpaca.markets"
 api = REST(API_KEY, API_SECRET, BASE_URL)
 
