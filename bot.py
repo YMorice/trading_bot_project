@@ -18,13 +18,10 @@ api = REST(API_KEY, API_SECRET, BASE_URL)
 
 
 #---------------------------
-# Def function
+# Def the function to launch order
+# I needed convert a notional amount into whole shares because Alpaca doesn't allow it for shorting
 #---------------------------
 def submit_whole_order(symbol, side, notional=1000):
-    """
-    Convert a notional amount into whole shares (int)
-    and send a valid Alpaca order (compatible with shorting).
-    """
     price = api.get_latest_trade(symbol).price
     qty = int(notional // price)
 
