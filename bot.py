@@ -11,6 +11,7 @@ import os
 #---------------------------
 # API 
 #---------------------------
+load_dotenv()
 API_KEY = os.getenv('ALPACA_API_KEY')
 API_SECRET = os.getenv('ALPACA_SECRET')
 BASE_URL = "https://paper-api.alpaca.markets"
