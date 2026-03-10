@@ -13,6 +13,16 @@ print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID").strip())
 print("SECRET:", os.getenv("PAPER_APCA_API_SECRET_KEY").strip())
 print("ALL ENV KEYS:", [k for k in os.environ.keys() if 'APCA' in k])
 
+r = requests.get(
+    "https://paper-api.alpaca.markets/v2/account",
+    headers={
+        "APCA-API-KEY-ID": API_KEY,
+        "APCA-API-SECRET-KEY": API_SECRET,
+    }
+)
+print(f"Status: {r.status_code}")
+print(f"Body: {r.text}")
+
 
 #---------------------------
 # API 
