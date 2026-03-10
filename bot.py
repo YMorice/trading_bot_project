@@ -12,6 +12,9 @@ import os
 print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID").strip())
 print("SECRET:", os.getenv("PAPER_APCA_API_SECRET_KEY").strip())
 
+print(repr(os.getenv("PAPER_APCA_API_KEY_ID")))
+print(repr(os.getenv("PAPER_APCA_API_SECRET_KEY")))
+
 
 #---------------------------
 # API 
