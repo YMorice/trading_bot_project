@@ -7,6 +7,7 @@ from alpaca_trade_api import REST
 from datetime import datetime
 from dotenv import load_dotenv
 import os
+import requests
 
 
 print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID").strip())
