@@ -9,8 +9,8 @@ from dotenv import load_dotenv
 import os
 
 
-print("KEY:", os.getenv("APCA_API_KEY_ID"))       # should not be None
-print("SECRET:", os.environ.get("APCA_API_SECRET_KEY")) # should not be None
+print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID"))       # should not be None
+print("SECRET:", os.getenv("PAPER_APCA_API_SECRET_KEY")) # should not be None
 
 
 #---------------------------
