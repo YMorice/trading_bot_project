@@ -10,8 +10,8 @@ import os
 import requests
 
 
-print("KEY:", os.getenv("APCA_API_KEY_ID").strip())
-print("SECRET:", os.getenv("APCA_API_SECRET_KEY").strip())
+print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID").strip())
+print("SECRET:", os.getenv("PAPER_APCA_API_SECRET_KEY").strip())
 print("ALL ENV KEYS:", [k for k in os.environ.keys() if 'APCA' in k])
 
 
