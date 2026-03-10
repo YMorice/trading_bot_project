@@ -11,9 +11,7 @@ import os
 
 print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID").strip())
 print("SECRET:", os.getenv("PAPER_APCA_API_SECRET_KEY").strip())
-
-print(repr(os.getenv("PAPER_APCA_API_KEY_ID")))
-print(repr(os.getenv("PAPER_APCA_API_SECRET_KEY")))
+print("ALL ENV KEYS:", [k for k in os.environ.keys() if 'APCA' in k])
 
 
 #---------------------------
