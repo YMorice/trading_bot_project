@@ -9,15 +9,15 @@ from dotenv import load_dotenv
 import os
 
 
-print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID"))       # should not be None
-print("SECRET:", os.getenv("PAPER_APCA_API_SECRET_KEY")) # should not be None
+print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID"))
+print("SECRET:", os.getenv("PAPER_APCA_API_SECRET_KEY"))
 
 
 #---------------------------
 # API 
 #---------------------------
-API_KEY = os.getenv('PAPER_APCA_API_KEY_ID')
-API_SECRET = os.getenv('PAPER_APCA_API_SECRET_KEY')
+API_KEY = os.getenv('PAPER_APCA_API_KEY_ID').strip()
+API_SECRET = os.getenv('PAPER_APCA_API_SECRET_KEY').strip()
 BASE_URL = "https://paper-api.alpaca.markets"
 api = REST(API_KEY, API_SECRET, BASE_URL)
 
