@@ -9,8 +9,8 @@ from dotenv import load_dotenv
 import os
 
 
-print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID"))
-print("SECRET:", os.getenv("PAPER_APCA_API_SECRET_KEY"))
+print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID").strip())
+print("SECRET:", os.getenv("PAPER_APCA_API_SECRET_KEY").strip())
 
 
 #---------------------------
