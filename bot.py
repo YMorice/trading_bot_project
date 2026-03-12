@@ -9,12 +9,6 @@ from dotenv import load_dotenv
 import os
 import requests
 
-
-print("KEY:", os.getenv("PAPER_APCA_API_KEY_ID").strip())
-print("SECRET:", os.getenv("PAPER_APCA_API_SECRET_KEY").strip())
-print("ALL ENV KEYS:", [k for k in os.environ.keys() if 'APCA' in k])
-
-
 #---------------------------
 # API 
 #---------------------------
@@ -22,17 +16,6 @@ API_KEY = os.getenv('PAPER_APCA_API_KEY_ID').strip()
 API_SECRET = os.getenv('PAPER_APCA_API_SECRET_KEY').strip()
 BASE_URL = "https://paper-api.alpaca.markets"
 api = REST(API_KEY, API_SECRET, BASE_URL)
-
-r = requests.get(
-    "https://paper-api.alpaca.markets/v2/account",
-    headers={
-        "APCA-API-KEY-ID": API_KEY,
-        "APCA-API-SECRET-KEY": API_SECRET,
-    }
-)
-print(f"Status: {r.status_code}")
-print(f"Body: {r.text}")
-
 
 #---------------------------
 # Def the function to launch order
